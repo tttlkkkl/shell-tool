@@ -2,7 +2,7 @@
 # 解析json中的地址数据并从远端下载图片转存到s3
 
 # 解析 json 数组
-list=$(aws s3 ls s3://slope-fs-pd/icon/bn --recursive|awk '{print $4}')
+list=$(aws s3 ls s3://slope-fs-pd/icon/128x128 --recursive|awk '{print $4}')
 # 按行循环 json 数组
 for i in $list;
 do
